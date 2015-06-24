@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Charting...</title>
+    <link rel="stylesheet" href="bower_components/c3/c3.min.css">
+    <style>
+      body {
+        padding: 3em;
+      }
+
+      .chart {
+        margin-bottom: 4em;
+        text-align: center;
+      }
+
+      @media (max-width: 600px) {
+        .c3-axis-x .tick:nth-child(even) tspan {
+          fill: red;
+          baseline-shift: -30px;
+          visibility: hidden;
+          display: none;
+        }
+
+        .c3-axis-x .tick:nth-child(4n+1) tspan {
+          fill: red;
+          baseline-shift: -2em;
+        }
+
+        .c3-axis-y tspan {
+          fill: blue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chart gender-chart"></div>
+    <div class="chart perf-chart"></div>
+    <div class="chart perf-chart-alt"></div>
+    <div class="chart likes-chart"></div>
+
+    <script src="bower_components/d3/d3.min.js"></script>
+    <script src="bower_components/c3/c3.min.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="demo.js"></script>
+  </body>
+</html>
